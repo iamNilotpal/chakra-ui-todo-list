@@ -8,7 +8,7 @@ export default function Home() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    const parseTodos = JSON.parse(localStorage.getItem('todos') || []);
+    const parseTodos = JSON.parse(localStorage.getItem('todos')) || [];
     setTodos(parseTodos);
   }, []);
 
